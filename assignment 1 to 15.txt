@@ -1,0 +1,259 @@
+				              Assignment 
+que1) Write a program to print Hello World. Compile and run it using command prompt.
+ANS - 
+	 class hello{
+	public static void main(String[] args) {
+		System.out.println("Hello World !");
+	}
+}
+
+Compile:- for complile ==  javac hello.java 
+	  for run     ==   java hello
+_____________________________________________________________________________________________________________________
+
+que2) Write a program to declare a variable named rollNo of integer type. 
+      Assign it a value (let say 100) to it and print the following statement roll no = 100 .
+ANS - public class variable{
+	public static void main(String[] args){
+		int rollno;
+		rollno = 100;
+		System.out.println(rollno);
+	}
+}
+_____________________________________________________________________________________________________________________
+ 
+que3)
+
+ANS- 
+
+_____________________________________________________________________________________________________________________
+
+que4) 	Write a program that initializes 2 byte type of variables. Add the values of these variables and store in a byte type of variable.
+		 [Note: primitive down casting is required in this program ] .
+ANS- 
+
+_____________________________________________________________________________________________________________________
+
+que5) Write a program that takes user’s name as command line argument and prints Welcome <entered user name>.
+
+ANS- class cmdargs{
+	public static void main(String args[]){
+		String s1 = args[0];
+		System.out.println(s1);
+		}
+}
+_____________________________________________________________________________________________________________________
+
+que6)  Write a program that takes radius of a circle as input. Read the entered radius using Scanner class. 
+	Then calculate and print the area and circumference of the circle.
+
+ANS- 
+	import java.util.Scanner;
+        class Circle{
+		public static void main(String args[]){
+			double radius;
+			double pi = 3.14;
+			System.out.print("Enter the radius of circle: ");
+			Scanner sc = new Scanner(System.in);
+			radius = sc.nextDouble();
+			double circum = 2*pi*radius;
+			double area = pi*radius*radius;
+			System.out.println("Circumference of circle : "+circum);
+			System.out.println("Area of circle : "+area);
+	}
+}
+_____________________________________________________________________________________________________________________
+
+que7) Write a program to calculate sum of 5 subject’s marks & find percentage. Take the obtained marks from 
+	user using Scanner class. Output should be in this format [ percentage marks = 99 % ]. 
+	Use concatenation operator here.
+ANS - 	import java.util.*;
+	class que7{ 
+	public static void main( String args[]){
+
+   	Scanner sc = new Scanner(System.in);
+  	 System.out.println("enter number of sub.");
+
+  	int subjects = sc.nextInt();
+   
+  	int sum=0;
+  		for(int i=0; i<subjects; i++){
+		 System.out.print("enter subject "+i+" marks ");
+  	 int marks = sc.nextInt();
+   	sum+= marks;
+}
+
+ 
+
+ double per = sum/(double)subjects;
+
+  System.out.println("percwntage is= "+per +"%");
+}
+}
+
+______________________________________________________________________________________________________________________
+
+
+que8) Write a program to find the simple interest. Take the principle amount, rate of interest 
+	and time from user using Scanner class.
+
+ANS -     
+
+  import java.util.*;
+
+   public class Q8{
+        public static void main( String args[]){
+
+   Scanner sc = new Scanner(System.in);
+   System.out.println("enter priciple amount");
+
+  double PA = sc.nextDouble();
+   
+  System.out.println("enter rate of interest");
+ double ROI = sc.nextDouble();
+
+  System.out.println("enter time");
+ double T = sc.nextDouble();
+
+  double SI = ( PA * ROI * T) / 100;
+ System.out.println("SI is= "+SI);
+}
+}
+
+_____________________________________________________________________________________________________________________
+Que9) Write a program to read the days (eg. 670 days) as integer value using Scanner class. 
+	Now convert the entered days into complete years, months and days and print them.
+ANS- 
+  import java.util.*;
+
+   public class Q9{
+        public static void main( String args[]){
+
+   Scanner sc = new Scanner(System.in);
+   System.out.println("number of days");
+   int days = sc.nextInt();
+
+   int year = days/365;
+   int months = days%365;
+ int months1 = months/30;
+   days= days%365;
+
+    int days1 =days%30;
+
+   System.out.println("yeras are= "+year+ " months are= "+months1+" days are "+days1);
+
+_____________________________________________________________________________________________________________________
+
+Que10) Write a program to convert temperature from Fahrenheit to Celsius. 
+       Take Fahrenheit as input using Scanner class. [ formula : C= 5*(f-32)/9 ]
+ANS - 
+
+_____________________________________________________________________________________________________________________
+
+Que 11) Write a program to swap two numbers without using third variable.
+
+ANS - import java.util.*;
+
+   public class Q11{
+        public static void main( String args[]){
+
+   Scanner sc = new Scanner(System.in);
+ 
+   int num1 = sc.nextInt();
+
+   int num2 = sc.nextInt();
+
+ num1 = num1+ num2;
+ num2= num1-num2;
+ num1= num1-num2;
+
+  System.out.println( num1+ " "+num2);
+}
+}
+
+_____________________________________________________________________________________________________________________
+
+que 12) In a company an employee is paid as under: If his basic salary is less than Rs. 10000, 
+	then HRA = 10% of basic salary and DA = 90% of basic salary. If his salary is either equal to or above Rs. 10000, 
+	then HRA = Rs. 2000 and DA = 98% of basic salary. If the employee's salary is input by the user 
+	write a program to find his gross salary. [ formula : GS= Basic + DA + HRA 
+
+ANS- import java.util.*;
+public class Q12{   
+public static void main(String args[])
+   {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Basic Salary");
+	double HRA;
+	double DA;
+	double basic = sc.nextDouble();
+        if (basic < 10000)
+	{
+	   HRA = 0.1*basic;
+	   DA = 0.9*basic;
+         }
+	else {
+
+	HRA = 2000;
+	 DA = 0.98*basic;
+      }
+
+double GS = basic + HRA + DA;
+
+System.out.println("GROSS SALARY "+GS);
+
+}
+}
+_____________________________________________________________________________________________________________________
+
+Que 13) Program to find greatest in 3 numbers.[ once using if else statement and then using ternary operator 
+	( logical operator) ]
+Ans -  import java.util.*;
+public class Q13{   
+public static void main(String args[])
+   {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter three numbers");
+	
+	int num1 = sc.nextInt();
+int num2 = sc.nextInt();
+int num3 = sc.nextInt();
+      
+   //int greater = (num2 >num3) ? ((num2 > num1) ? num2 :num1)  : ((num3 > num1) ? num3 : num1);
+
+          int greater = (num2 >num3 && num2 > num1 )  ?  num2 : ((num1 > num2 && num1 > num3) ? num1: num3);
+   System.out.println("Greater number is= "+greater);
+}
+}
+ 
+
+_____________________________________________________________________________________________________________________
+
+Que 14) Program to check that entered year is a leap year or not.  
+
+ANS- 
+
+_____________________________________________________________________________________________________________________
+
+Que 15) Accept person’s gender (character m for male and f for female), age (integer),
+ 	as input and then check whether person is eligible for marriage or not
+
+ANS-  import java.util.*;
+public class Q15{   
+public static void main(String args[]) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter the gender and age: ");
+		char sex = sc.next().charAt(0);
+                //char s = sex.charAt(0);
+		int age = sc.nextInt();
+		if((sex=='F' && age>=18) || (sex=='M' && age>=21)) {
+			System.out.println("Eligible for marriage");
+		}
+		else
+		{
+			System.out.println("Not Eligible for marriage");
+		}
+	}
+}
+
+_____________________________________________________________________________________________________________________
